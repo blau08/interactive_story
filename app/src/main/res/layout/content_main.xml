@@ -2,13 +2,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity"
+    android:background="@android:color/white">
 
-    <TextView android:text="Hello World!" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleImageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/main_title"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:contentDescription="Signals from Mars"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="START YOUR ADVENTURE"
+        android:id="@+id/startButton"
+        android:layout_alignLeft="@+id/nameEditText"
+        android:layout_alignStart="@+id/nameEditText"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FF3A8AEC"
+        android:background="@android:color/white"
+        android:layout_below="@+id/nameEditText" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/nameEditText"
+        android:layout_below="@+id/titleImageView"
+        android:layout_alignLeft="@+id/titleImageView"
+        android:layout_alignStart="@+id/titleImageView"
+        android:hint="Enter your name to begin"
+        android:maxLength="30" />
 </RelativeLayout>
